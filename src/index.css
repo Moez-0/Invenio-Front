@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+  --font-inter: 'Inter', sans-serif;
+  --font-display: Inter, "sans-serif";
+  --color-primary: #2F1C6B;
+  --color-secondary: #5125D2;
+  --color-tertiary: #673EE5;
+  --color-accent: #303141;
+  --color-light: #D5E0FF;
+  /* --color-primary: #00ED3E;
+  --color-secondary: #45DF33;
+  --color-tertiary: #8AD128;
+  --color-accent: #303141;
+  --color-light: #CCFCD8; */
+
+
+}
