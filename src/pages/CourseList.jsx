@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import CourseCard from '../components/home/CourseCard';
 
 const courses = [
-  { id: 1, image: '/course.png', title: 'Introduction to JavaScript', instructor: 'John Doe', rating: 4, reviews: 120, price: 19.99 },
-  { id: 2, image: '/course.png', title: 'React for Beginners', instructor: 'Jane Smith', rating: 5, reviews: 200, price: 29.99 },
-  { id: 3, image: '/course.png', title: 'Advanced Python Programming', instructor: 'Alice Johnson', rating: 4, reviews: 90, price: 39.99 },
-  { id: 4, image: '/course.png', title: 'Full Stack Web Development', instructor: 'Bob Williams', rating: 5, reviews: 150, price: 49.99 },
-  { id: 5, image: '/course.png', title: 'Machine Learning Basics', instructor: 'Charlie Brown', rating: 4.5, reviews: 110, price: 25.99 },
-  { id: 6, image: '/course.png', title: 'Data Structures and Algorithms', instructor: 'Dana White', rating: 5, reviews: 180, price: 35.99 },
-  { id: 7, image: '/course.png', title: 'Web Development with Node.js', instructor: 'Eve Green', rating: 4, reviews: 100, price: 40.99 },
-  { id: 8, image: '/course.png', title: 'UI/UX Design Fundamentals', instructor: 'Frank Black', rating: 5, reviews: 250, price: 29.99 },
-  { id: 9, image: '/course.png', title: 'Introduction to Cloud Computing', instructor: 'Grace Lee', rating: 4, reviews: 75, price: 19.99 },
-  { id: 10, image: '/course.png', title: 'DevOps and Continuous Integration', instructor: 'Henry Grey', rating: 4.5, reviews: 140, price: 32.99 }
+  { id: 1, image: '/course.png', title: 'Introduction to JavaScript', instructor: 'Moez Souidi', rating: 4, reviews: 120, price: 19.99 },
+  { id: 2, image: '/course.png', title: 'React for Beginners', instructor: 'Moez Souidi', rating: 5, reviews: 200, price: 29.99 },
+  { id: 3, image: '/course.png', title: 'Advanced Python Programming', instructor: 'Zrafi AbdSlam', rating: 4, reviews: 90, price: 39.99 },
+  { id: 4, image: '/course.png', title: 'Full Stack Web Development', instructor: 'Chams Mhamdi', rating: 5, reviews: 150, price: 49.99 },
+  { id: 5, image: '/course.png', title: 'Machine Learning Basics', instructor: 'Moez Souidi', rating: 4.5, reviews: 110, price: 25.99 },
+  { id: 6, image: '/course.png', title: 'Data Structures and Algorithms', instructor: 'Zrafi AbdSlam', rating: 5, reviews: 180, price: 35.99 },
+  { id: 7, image: '/course.png', title: 'Web Development with Node.js', instructor: 'Maison des TPE', rating: 4, reviews: 100, price: 40.99 },
+  { id: 8, image: '/course.png', title: 'UI/UX Design Fundamentals', instructor: 'Chams Mhamdi', rating: 5, reviews: 250, price: 29.99 },
+  { id: 9, image: '/course.png', title: 'Introduction to Cloud Computing', instructor: 'Moez Souidi', rating: 4, reviews: 75, price: 19.99 },
+  { id: 10, image: '/course.png', title: 'DevOps and Continuous Integration', instructor: 'Moez Souidi', rating: 4.5, reviews: 140, price: 32.99 }
 ];
 
 const CourseList = () => {
