@@ -50,8 +50,7 @@ const Home = () => {
       <Testimonials />
       {/* Join */}
       <Join />
-      {/* Footer */}
-      <Footer />
+
 
       </div>
   );
