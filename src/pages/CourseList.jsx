@@ -8,7 +8,7 @@ const courses = [
   { id: 2, image: "/course.png", title: "React for Beginners", instructor: "Moez Souidi", category: "Web Development", rating: 5, reviews: 200, price: 29.99 },
   { id: 3, image: "/course.png", title: "Advanced Python Programming", instructor: "Zrafi AbdSlam", category: "Programming Languages", rating: 4, reviews: 90, price: 39.99 },
   { id: 4, image: "/course.png", title: "Full Stack Web Development", instructor: "Chams Mhamdi", category: "Web Development", rating: 5, reviews: 150, price: 49.99 },
-  { id: 5, image: "/course.png", title: "Machine Learning Basics", instructor: "Moez Souidi", category: "Data Science", rating: 4.5, reviews: 110, price: 25.99 },
+  { id: 5, image: "/course.png", title: "Machine Learning 101", instructor: "Moez Souidi", category: "Data Science", rating: 4.5, reviews: 110, price: 25.99 },
   { id: 6, image: "/course.png", title: "Data Structures and Algorithms", instructor: "Zrafi AbdSlam", category: "Programming Languages", rating: 5, reviews: 180, price: 35.99 },
   { id: 7, image: "/course.png", title: "Web Development with Node.js", instructor: "Maison des TPE", category: "Web Development", rating: 4, reviews: 100, price: 40.99 },
   { id: 8, image: "/course.png", title: "UI/UX Design Fundamentals", instructor: "Chams Mhamdi", category: "Design", rating: 5, reviews: 250, price: 29.99 },
