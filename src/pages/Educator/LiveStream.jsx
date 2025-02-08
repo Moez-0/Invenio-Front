@@ -211,11 +211,11 @@ const StartLivestreamPage = () => {
           <div className="space-y-2">
             <div className="flex justify-between">
               <span className="font-medium">Stream Link:</span>
-              <a href="#" className="text-blue-600">http://livestream.example.com</a>
+              <a href="#" className="text-blue-600">http://id.invenio.fr</a>
             </div>
             <div className="flex justify-between">
               <span className="font-medium">Stream Key:</span>
-              <span className="text-gray-600">XXXX-XXXX-XXXX-XXXX</span>
+              <span className="text-gray-600">1234-1234-1234</span>
             </div>
           </div>
         </div>
