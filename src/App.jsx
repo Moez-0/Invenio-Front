@@ -14,6 +14,7 @@ import Dashboard from './pages/User/Dashboard';
 import EducatorDashboard from './pages/Educator/EducatorDashboard';
 import Livestream from './pages/Educator/LiveStream';
 import CartPage from './pages/User/Cart';
+import CoursePage from './components/home/CoursePage';
 
 
 
@@ -33,6 +34,7 @@ function App() {
           <Route path='login' element={<Login />} />
           <Route path='signup' element={<Signup />} />
           <Route path='cart' element={<CartPage />} />
+          <Route path='course/:id' element={<CoursePage />} />
           <Route path='dashboard' element={<Dashboard />} />
           <Route path='educator-dashboard' element={<EducatorDashboard />} />
           <Route path='livestream' element={<Livestream />} />
