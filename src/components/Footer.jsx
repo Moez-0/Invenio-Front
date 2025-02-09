@@ -56,7 +56,7 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">Contact Us</h3>
             <p className="text-sm">Email: support@invenio.fr</p>
-            <p className="text-sm">Phone: +1 234 567 890</p>
+            <p className="text-sm">Phone: +33 2654587</p>
           </div>
 
           {/* Trusted Logos */}
