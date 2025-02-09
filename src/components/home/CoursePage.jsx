@@ -7,7 +7,7 @@ const CoursePage = () => {
     description:
       "Learn React from scratch with this comprehensive course, covering all the fundamentals and advanced techniques to become a React expert.",
     instructor: {
-      name: "John Doe",
+      name: "Moez Souidi",
       image: "https://i.pravatar.cc/100?img=3",
       title: "Senior Web Developer",
     },
@@ -25,7 +25,7 @@ const CoursePage = () => {
       { title: "React with TypeScript", lessons: 3 },
     ],
     instructorBio:
-      "John is a Senior Web Developer with over 10 years of experience building applications using React and other modern web technologies. He is passionate about teaching and helping developers level up their skills.",
+      "Moez is a Senior Web Developer with over 10 years of experience building applications using React and other modern web technologies. He is passionate about teaching and helping developers level up their skills.",
   };
 
   const [isOpen, setIsOpen] = useState(null);
