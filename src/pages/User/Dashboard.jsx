@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FaHome, FaBook, FaCreditCard, FaEnvelope, FaCog, FaSignOutAlt, FaBars } from "react-icons/fa";
+import { FaHome, FaBook, FaCreditCard, FaEnvelope, FaCog, FaSignOutAlt, FaBars, FaChalkboardTeacher } from "react-icons/fa";
 
 const Dashboard = () => {
   const [user, setUser] = useState(null);
   const [enrolledCourses, setEnrolledCourses] = useState([]);
   const [savedCourses, setSavedCourses] = useState([]);
-  const [sidebarOpen, setSidebarOpen] = useState(false); // Mobile sidebar toggle state
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
     setUser({
@@ -29,31 +29,28 @@ const Dashboard = () => {
   if (!user) return <div>Loading...</div>;
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex h-screen bg-white">
       {/* Sidebar */}
       <div
-        className={`w-64 bg-white shadow-lg p-6 flex flex-col fixed md:relative top-0 left-0 h-full transition-transform transform md:translate-x-0 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}`}
+        className={`w-64 bg-white  p-6 flex flex-col fixed md:relative top-0 md:top-10 left-0 h-full transition-transform transform md:translate-x-0  ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
         <div className="text-2xl font-bold text-center mb-8">
           <img src="/logo.svg" alt="Logo" className="w-16 h-16 mx-auto" />
         </div>
         <nav className="space-y-4">
-          <Link to="/dashboard" className="flex items-center gap-3 text-gray-700 hover:text-blue-500">
-            <FaHome /> Dashboard
-          </Link>
-          <Link to="/subscriptions" className="flex items-center gap-3 text-gray-700 hover:text-blue-500">
-            <FaBook /> Subscriptions
-          </Link>
-          <Link to="/payments" className="flex items-center gap-3 text-gray-700 hover:text-blue-500">
-            <FaCreditCard /> Payments
-          </Link>
-          <Link to="/messages" className="flex items-center gap-3 text-gray-700 hover:text-blue-500">
-            <FaEnvelope /> Messages
-          </Link>
-          <Link to="/settings" className="flex items-center gap-3 text-gray-700 hover:text-blue-500">
-            <FaCog /> Settings
-          </Link>
-          <button className="flex items-center gap-3 text-red-500 mt-4" onClick={() => alert("Logging out...")}>
+          {[
+            { to: "/dashboard", icon: <FaHome />, label: "Dashboard" },
+            { to: "/courses", icon: <FaChalkboardTeacher />, label: "Courses" },
+            { to: "/subscriptions", icon: <FaBook />, label: "Subscriptions" },
+            { to: "/payments", icon: <FaCreditCard />, label: "Payments" },
+            { to: "/messages", icon: <FaEnvelope />, label: "Messages" },
+            { to: "/settings", icon: <FaCog />, label: "Settings" },
+          ].map(({ to, icon, label }) => (
+            <Link key={to} to={to} className="flex items-center gap-3 text-accent hover:bg-secondary hover:text-white px-4 py-3 rounded-lg transition-all">
+              {icon} {label}
+            </Link>
+          ))}
+          <button className="flex items-center gap-3 text-red-500 mt-4 px-4 py-3 rounded-lg hover:bg-red-500 hover:text-white transition-all" onClick={() => alert("Logging out...")}> 
             <FaSignOutAlt /> Logout
           </button>
         </nav>
@@ -69,8 +66,7 @@ const Dashboard = () => {
 
       {/* Main Content */}
       <div className="flex-1 p-8 ml-0 md:ml-64 overflow-y-auto">
-        {/* User Profile */}
-        <div className="flex items-center gap-4 bg-white p-6 rounded-lg shadow-md">
+        <div className="flex items-center gap-4 bg-white p-6 rounded-2xl shadow-md">
           <img src={user.profilePic} alt="Profile" className="w-16 h-16 rounded-full" />
           <div>
             <h2 className="text-2xl font-semibold">{user.name}</h2>
@@ -84,14 +80,14 @@ const Dashboard = () => {
           {enrolledCourses.length > 0 ? (
             <ul className="space-y-4">
               {enrolledCourses.map((course) => (
-                <li key={course.id} className="p-4 bg-white rounded-lg shadow-md flex justify-between">
+                <li key={course.id} className="p-4 bg-white rounded-2xl shadow-md flex justify-between">
                   <span>{course.title}</span>
-                  <span className="text-gray-600">Progress: {course.progress}%</span>
+                  <span className="text-accent">Progress: {course.progress}%</span>
                 </li>
               ))}
             </ul>
           ) : (
-            <p className="text-gray-500">No enrolled courses yet.</p>
+            <p className="text-accent">No enrolled courses yet.</p>
           )}
         </div>
 
@@ -101,13 +97,13 @@ const Dashboard = () => {
           {savedCourses.length > 0 ? (
             <ul className="space-y-4">
               {savedCourses.map((course) => (
-                <li key={course.id} className="p-4 bg-white rounded-lg shadow-md">
-                  <Link to={`/courses/${course.id}`} className="text-blue-600 hover:underline">{course.title}</Link>
+                <li key={course.id} className="p-4 bg-white rounded-2xl shadow-md">
+                  <Link to={`/courses/${course.id}`} className="text-secondary hover:underline">{course.title}</Link>
                 </li>
               ))}
             </ul>
           ) : (
-            <p className="text-gray-500">No saved courses yet.</p>
+            <p className="text-accent">No saved courses yet.</p>
           )}
         </div>
       </div>

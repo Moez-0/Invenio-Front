@@ -13,6 +13,7 @@ import About from './pages/About';
 import Dashboard from './pages/User/Dashboard';
 import EducatorDashboard from './pages/Educator/EducatorDashboard';
 import Livestream from './pages/Educator/LiveStream';
+import CartPage from './pages/User/Cart';
 
 
 
@@ -31,7 +32,7 @@ function App() {
           <Route path='explore' element={<Explore />} />
           <Route path='login' element={<Login />} />
           <Route path='signup' element={<Signup />} />
-
+          <Route path='cart' element={<CartPage />} />
           <Route path='dashboard' element={<Dashboard />} />
           <Route path='educator-dashboard' element={<EducatorDashboard />} />
           <Route path='livestream' element={<Livestream />} />
