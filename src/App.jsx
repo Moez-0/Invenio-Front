@@ -15,6 +15,10 @@ import EducatorDashboard from './pages/Educator/EducatorDashboard';
 import Livestream from './pages/Educator/LiveStream';
 import CartPage from './pages/User/Cart';
 import CoursePage from './components/home/CoursePage';
+import CheckoutPage from './pages/User/Checkout';
+import ConfirmationPage from './pages/User/Confirmation';
+import LearnerDashboard from './pages/User/Welcome';
+import InstructorDashboard from './pages/Educator/Welcome';
 
 
 
@@ -34,9 +38,13 @@ function App() {
           <Route path='login' element={<Login />} />
           <Route path='signup' element={<Signup />} />
           <Route path='cart' element={<CartPage />} />
+          <Route path='checkout' element={<CheckoutPage />} />
+          <Route path='confirmation' element={<ConfirmationPage />} />
           <Route path='course/:id' element={<CoursePage />} />
           <Route path='dashboard' element={<Dashboard />} />
+          <Route path='/learner/welcome' element={<LearnerDashboard />} />
           <Route path='educator-dashboard' element={<EducatorDashboard />} />
+          <Route path='/educator/welcome' element={<InstructorDashboard />} />
           <Route path='livestream' element={<Livestream />} />
           <Route path='*' element={<NoPage />} />
         </Route>
