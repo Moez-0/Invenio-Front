@@ -66,7 +66,7 @@ const InstructorDashboard = () => {
 
           <Link
             to="/instructor/add-course"
-            className="mt-6 inline-block bg-secondary text-white px-5 py-3 rounded-md font-semibold hover:bg-primary transition-all flex items-center"
+            className="mt-6  bg-secondary text-white px-10 py-3 rounded-md font-semibold hover:bg-primary transition-all flex items-center justify-evenly"
           >
             <FaPlusCircle className="mr-2" /> Add New Course
           </Link>
