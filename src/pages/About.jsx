@@ -3,11 +3,11 @@ import { FaLightbulb, FaUsers, FaChartLine, FaHandshake, FaRobot, FaBrain, FaCom
 
 const About = () => {
   return (
-    <div className="font-inter  flex flex-col items-center justify-center min-h-screen bg-white px-6 py-12">
+    <div className="font-inter  flex flex-col items-center justify-center min-h-screen bg-white dark:bg-dark px-6 py-12">
       {/* Header Section */}
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">About Invenio</h1>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <h1 className="text-4xl font-bold text-gray-800 mb-4 dark:text-light">About Invenio</h1>
+        <p className="text-lg text-gray-600 dark:text-light max-w-2xl mx-auto">
           Invenio is your go-to platform for innovative learning and collaboration. We empower individuals and organizations to achieve their goals through cutting-edge courses, interactive tools, and a supportive community.
         </p>
       </div>
@@ -108,8 +108,8 @@ const About = () => {
 
       {/* Call-to-Action Section */}
       <div className="text-center">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-4">Join Invenio Today</h2>
-        <p className="text-gray-600 mb-6">
+        <h2 className="text-2xl font-semibold text-gray-800 dark:text-light mb-4">Join Invenio Today</h2>
+        <p className="text-gray-600 dark:text-light mb-6">
           Start your journey with Invenio and unlock your potential.
         </p>
         <a

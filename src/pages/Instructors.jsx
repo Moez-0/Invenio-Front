@@ -17,16 +17,16 @@ const Instructors = () => {
   );
 
   return (
-    <div className="min-h-screen bg-white px-6 py-12">
-      <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">Meet Our Instructors</h1>
+    <div className="min-h-screen bg-white dark:bg-dark px-6 py-12">
+      <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-light mb-6">Meet Our Instructors</h1>
 
       {/* Search Bar (Styled like Login Input) */}
       <div className="relative max-w-lg mx-auto mb-8">
-        <CiSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-xl" />
+        <CiSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 dark:text-light text-xl" />
         <input
           type="text"
           placeholder="Search instructors..."
-          className="w-full bg-white border rounded-md px-10 py-2 focus:ring-2 focus:ring-secondary outline-none shadow-sm transition"
+          className="w-full bg-white dark:bg-dark dark:text-light border rounded-md px-10 py-2 focus:ring-2 focus:ring-secondary outline-none shadow-sm transition"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />

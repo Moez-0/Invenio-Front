@@ -29,7 +29,7 @@ const Dashboard = () => {
   if (!user) return <div>Loading...</div>;
 
   return (
-    <div className="flex h-screen bg-white">
+    <div className="flex h-screen bg-white ">
       {/* Sidebar */}
       <div
         className={`w-64 bg-white  p-6 flex flex-col fixed md:relative top-0 md:top-10 left-0 h-full transition-transform transform md:translate-x-0  ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}`}

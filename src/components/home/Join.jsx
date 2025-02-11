@@ -6,12 +6,12 @@ const Join = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <div ref={ref} className="flex flex-col items-center justify-center h-screen bg-[url(/bg2.webp)] bg-cover bg-center bg-no-repeat">
+    <div ref={ref} className="px-5 md:px-0 flex flex-col items-center justify-center h-screen bg-[url(/bg2.webp)] bg-cover bg-center bg-no-repeat">
       <motion.h1
         initial={{ y: -80, opacity: 0 }}
         animate={isInView ? { y: 0, opacity: 1 } : {}}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="text-4xl md:text-6xl font-bold text-white"
+        className="text-2xl md:text-6xl font-bold text-white"
       >
         Start Learning Today
       </motion.h1>
@@ -20,7 +20,7 @@ const Join = () => {
         initial={{ y: 80, opacity: 0 }}
         animate={isInView ? { y: 0, opacity: 1 } : {}}
         transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-        className="text-lg md:text-xl text-white mt-4"
+        className=" text-sm md:text-xl text-white mt-4"
       >
         Livestreams and on-demand courses from top instructors, all in one place.
       </motion.p>

@@ -69,8 +69,9 @@ const CourseCarousel = () => {
   };
 
   return (
-    <div className="relative max-w-6xl mx-auto px-4 py-8">
-      <h2 className="text-2xl font-semibold mb-6 text-center">Popular Courses</h2>
+    <div className="h-screen   bg-white dark:bg-dark">
+    <div className="relative max-w-6xl mx-auto px-4 py-8 ">
+      <h2 className="text-2xl font-semibold mb-6 text-center dark:text-light">Popular Courses</h2>
 
       {/* Navigation Controls */}
       <button
@@ -95,6 +96,7 @@ const CourseCarousel = () => {
           </div>
         ))}
       </Slider>
+    </div>
     </div>
   );
 };

@@ -94,8 +94,8 @@ const Explore = () => {
   };
 
   return (
-    <div className="font-inter min-h-screen bg-white px-6 py-12">
-      <h1 className="text-3xl font-bold text-center text-accent mb-6">Explore Courses by Category</h1>
+    <div className="font-inter min-h-screen bg-white dark:bg-dark px-6 py-12">
+      <h1 className="text-3xl font-bold text-center text-accent dark:text-light mb-6">Explore Courses by Category</h1>
 
       <div className="max-w-4xl mx-auto space-y-4">
         {categories.map((category, index) => (

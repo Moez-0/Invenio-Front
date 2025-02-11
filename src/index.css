@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
 @theme {
   --font-inter: 'Inter', sans-serif;
@@ -10,6 +15,7 @@
   --color-tertiary: #673EE5;
   --color-accent: #303141;
   --color-light: #D5E0FF;
+  --color-dark: #121212;
   /* --color-primary: #00ED3E;
   --color-secondary: #45DF33;
   --color-tertiary: #8AD128;

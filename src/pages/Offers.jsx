@@ -2,12 +2,12 @@ import React from 'react';
 
 const OffersPage = () => {
   return (
-    <div className="bg-gray-50 min-h-screen py-16 px-6">
+    <div className="bg-white dark:bg-dark min-h-screen py-16 px-6">
       <div className="max-w-7xl mx-auto text-center">
-        <h1 className="text-4xl font-extrabold text-gray-900">
+        <h1 className="text-4xl font-extrabold text-gray-900 dark:text-secondary">
           Join Invenio: The AI-powered E-learning Platform
         </h1>
-        <p className="text-xl text-gray-600 mt-4">
+        <p className="text-xl text-gray-600 dark:text-light mt-4 ">
           Choose a plan that suits you and unlock unlimited access to premium content, courses, and more.
         </p>
 
@@ -83,7 +83,7 @@ const OffersPage = () => {
 
         {/* Additional Information Section */}
         <div className="mt-16 max-w-2xl mx-auto text-center">
-          <p className="text-lg text-gray-700">
+          <p className="text-lg text-gray-700 dark:text-light">
             Join Invenio today and gain access to a library of expert-led courses, AI-driven learning tools, and a community that’s committed to your growth. Whether you're looking to learn a new skill or advance your career, we’ve got you covered.
           </p>
         </div>

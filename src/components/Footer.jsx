@@ -1,16 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '/logo.svg';
+
 import { FaTwitter, FaFacebookF, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-white text-black py-8 font-inter">
+    <footer className="bg-white  dark:bg-dark text-black dark:text-light py-8 font-inter">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center mb-6 md:mb-0">
             <img src={logo} alt="Company Logo" className="w-24 md:w-32" />
-            <p className="text-sm text-black ml-4 max-w-xs md:max-w-sm">
+            <p className="text-sm text-black dark:text-light ml-4 max-w-xs md:max-w-sm">
               Unlock your potential with courses that match your ambitions. Start your learning journey with us today.
             </p>
           </div>
@@ -75,8 +76,8 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-8 border-t border-black pt-4 text-center">
-          <p className="text-sm text-black">
+        <div className="mt-8 border-t border-black dark:border-light pt-4 text-center">
+          <p className="text-sm text-black dark:text-light">
             &copy; {new Date().getFullYear()} Invenio. All rights reserved.
           </p>
         </div>

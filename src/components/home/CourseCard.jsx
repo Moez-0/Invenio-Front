@@ -3,14 +3,14 @@ import React from "react";
 const CourseCard = ({ id, image, title, instructor, rating, reviews, price }) => {
   return (
     <a
-      className="border border-gray-500/30 pb-6 overflow-hidden rounded-lg block hover:shadow-lg transition-shadow"
+      className="border border-gray-500/30 dark:text-light pb-6 overflow-hidden rounded-lg block hover:shadow-lg transition-shadow"
       href={`/course/${id}`}
       data-discover="true"
     >
       <img className="w-full" src={image} alt={title} />
       <div className="p-3 text-left">
         <h3 className="text-base font-semibold">{title}</h3>
-        <p className="text-gray-500">{instructor}</p>
+        <p className="text-gray-500 dark:text-light">{instructor}</p>
         <div className="flex items-center space-x-2">
           <p>{rating}</p>
           <div className="flex">
@@ -29,7 +29,7 @@ const CourseCard = ({ id, image, title, instructor, rating, reviews, price }) =>
           </div>
           <p className="text-gray-500">({reviews})</p>
         </div>
-        <p className="text-base font-semibold text-gray-800">${price}</p>
+        <p className="text-base font-semibold text-gray-800 dark:text-light">${price}</p>
       </div>
     </a>
   );

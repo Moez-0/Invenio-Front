@@ -2,17 +2,23 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import TopHeader from './TopHeader';
 import logo from '/logo.svg';
+import logoDark from '/logo-dark.svg';
 import { CiSearch } from 'react-icons/ci';
 import { FaGlobe } from 'react-icons/fa';
 import { LuShoppingCart, LuMenu } from 'react-icons/lu';
+import { MdDarkMode ,MdOutlineDarkMode  } from "react-icons/md";
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = ({ userRole = 'guest' }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
   const languageRef = useRef(null);
+  const [darkMode, setDarkMode] = useState(false);
+
+
 
   useEffect(() => {
+    
     const handleClickOutside = (event) => {
       if (languageRef.current && !languageRef.current.contains(event.target)) {
         setLanguageOpen(false);
@@ -45,31 +51,42 @@ const Navbar = ({ userRole = 'guest' }) => {
       { to: '/about', label: 'About' }
     );
   }
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    if (darkMode) {
+      document.documentElement.classList.remove('dark');
+    } else {
+      document.documentElement.classList.add('dark');
+    }
+
+  };
+
 
   return (
     <div>
       <TopHeader />
-      <div className='font-inter h-20 bg-white text-black flex justify-between items-center drop-shadow-sm px-4 md:px-10'>
+      <div className='font-inter h-20 bg-white dark:bg-dark text-black  flex justify-between items-center drop-shadow-sm px-4 md:px-10 transition-colors duration-300'>
         <div className='flex items-center'>
           <Link to='/' className='flex items-center'>
-            <img src={logo} alt='logo' className='w-24' />
+            {darkMode ? <img src={logoDark} alt='logo' className='w-24' /> : <img src={logo} alt='logo' className='w-24' />}
+
           </Link>
-          <div className='hidden md:flex items-center w-96 max-w-xl mx-10 bg-gray-100 p-2 rounded-full'>
-            <CiSearch className='text-2xl mr-4' />
-            <input type='text' placeholder='Search for anything' className='w-full border-none outline-none bg-transparent' />
+          <div className='hidden md:flex items-center w-96 max-w-xl mx-10 bg-gray-100 dark:bg-dark p-2 rounded-full'>
+            <CiSearch className='text-2xl mr-4 dark:text-light' />
+            <input type='text' placeholder='Search for anything' className='w-full border-none outline-none bg-transparent  dark:text-light' />
           </div>
         </div>
 
         <div className='hidden md:flex items-center'>
-          <div className='flex items-center space-x-2 text-accent mr-10'>
+          <div className='flex items-center space-x-2 text-accent dark:text-white mr-10'>
             {navLinks.map(({ to, label }) => (
-              <Link key={to} to={to} className='p-3 hover:bg-light transition-all duration-70 ease-in-out'>{label}</Link>
+              <Link key={to} to={to} className='p-3 hover:bg-light hover:dark:text-dark transition-all duration-70 ease-in-out'>{label}</Link>
             ))}
           </div>
           <div className='flex items-center space-x-4 font-bold'>
             {/* Shopping Cart Icon */}
             <div className='relative'>
-              <Link to='/cart' className='text-accent hover:text-secondary'>
+              <Link to='/cart' className='text-accent dark:text-white hover:text-secondary'>
                 <LuShoppingCart className='text-2xl' />
                 {/* Example: If you want to show the cart count */}
                 {/* <span className='absolute top-0 right-0 text-xs bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center'>
@@ -104,12 +121,15 @@ const Navbar = ({ userRole = 'guest' }) => {
                 )}
               </AnimatePresence>
             </div>
+            <button onClick={toggleDarkMode} className='text-2xl'>
+              {darkMode ? <MdOutlineDarkMode className='dark:text-white hover:cursor-pointer hover:text-secondary transition-all duration-75 ease-in-out'/> : <MdDarkMode className='hover:cursor-pointer hover:text-secondary transition-all duration-75 ease-in-out'/>}
+            </button>
           </div>
         </div>
 
         <div className='md:hidden'>
           <button onClick={() => setIsOpen(!isOpen)} className='text-2xl'>
-            <LuMenu className='hover:cursor-pointer hover:text-secondary transition-all duration-75 ease-in-out'/>
+            <LuMenu className='hover:cursor-pointer hover:text-secondary dark:text-light transition-all duration-75 ease-in-out'/>
           </button>
         </div>
       </div>
@@ -121,10 +141,10 @@ const Navbar = ({ userRole = 'guest' }) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className='font-inter md:hidden bg-white w-full py-4 px-6 flex flex-col space-y-2 shadow-md'
+            className='font-inter md:hidden bg-white dark:bg-dark w-full py-4 px-6 flex flex-col space-y-2 shadow-md'
           >
             {navLinks.map(({ to, label }) => (
-              <Link key={to} to={to} className='p-2 hover:bg-light'>{label}</Link>
+              <Link key={to} to={to} className='p-2 hover:bg-light hover:dark:text-dark dark:text-light '>{label}</Link>
             ))}
             <hr />
             {userRole === 'guest' ? (

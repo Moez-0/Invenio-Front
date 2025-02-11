@@ -40,7 +40,7 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-4xl mx-auto text-center py-16 px-6 relative">
+    <div className="w-full max-w-4xl mx-auto text-center py-16 px-6 relative ">
       <h2 className="text-3xl font-bold text-gray-800">What Our Learners Say</h2>
       <p className="text-gray-600 mt-2">Hear from students who transformed their careers with us.</p>
 

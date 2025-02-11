@@ -3,7 +3,7 @@ import { FaGoogle, FaFacebook, FaApple } from "react-icons/fa";
 
 const Login = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-gray-50 px-6">
+    <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-gray-50 dark:bg-dark px-6">
       {/* Left Side Illustration */}
       <div className="hidden md:flex w-1/2 justify-center">
         <img src="/logo.svg" alt="Login Illustration" className="max-w-md opacity-90" />

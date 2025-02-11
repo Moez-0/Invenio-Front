@@ -62,20 +62,21 @@ const CourseList = () => {
   }
 
   return (
-    <div className="relative md:px-36 px-8 pt-20 text-left">
+
+    <div className="relative md:px-36 px-8 pt-20 text-left bg-white dark:bg-dark">
       {/* Header & Search Bar */}
       <div className="flex md:flex-row flex-col gap-6 items-start justify-between w-full max-w-7xl mx-auto px-4 md:px-6 py-8">
         <div className="flex flex-col md:flex-row gap-6 items-center justify-between w-full">
-          <h1 className="text-4xl font-semibold text-gray-800">Available Courses</h1>
-          <form onSubmit={handleSearch} className="max-w-xl w-full md:h-14 h-12 flex items-center bg-white border border-gray-500/20 rounded">
+          <h1 className="text-4xl font-semibold text-gray-800 dark:text-light">Available Courses</h1>
+          <form onSubmit={handleSearch} className="max-w-xl w-full md:h-14 h-12 flex items-center  border border-gray-500/20 rounded">
             <input
               type="text"
-              className="w-full h-full outline-none text-gray-500/80 px-4"
+              className="w-full h-full outline-none text-gray-500/80 dark:text-light bg-white dark:bg-dark px-4"
               placeholder="Search for courses"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
-            <button type="submit" className="bg-secondary hover:bg-primary cursor-pointer rounded text-white md:px-10 px-7 md:py-3 py-2 mx-1">
+            <button type="submit" className="bg-secondary hover:bg-primary cursor-pointer rounded text-white  md:px-10 px-7 md:py-3 py-2 mx-1">
               Search
             </button>
           </form>
@@ -87,7 +88,7 @@ const CourseList = () => {
         {currentCourses.length > 0 ? (
           currentCourses.map((course) => <CourseCard key={course.id} {...course} />)
         ) : (
-          <p className="text-center col-span-4 text-gray-500">No courses found.</p>
+          <p className="text-center col-span-4 text-gray-500 dark:text-light">No courses found.</p>
         )}
       </div>
 
@@ -110,6 +111,7 @@ const CourseList = () => {
         </div>
       )}
     </div>
+
   );
 };
 

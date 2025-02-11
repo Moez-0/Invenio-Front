@@ -20,7 +20,7 @@ const Home = () => {
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.3 }}
-          className='text-4xl md:text-6xl font-bold text-white'
+          className='text-2xl md:text-6xl font-bold text-white'
         >
           Learn from the Best
         </motion.h1>
@@ -28,7 +28,7 @@ const Home = () => {
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className='text-lg md:text-xl text-white mt-4'
+          className='text-sm md:text-xl text-white mt-4'
         >
           Hundreds of courses from top instructors, all in one place.
         </motion.p>

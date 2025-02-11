@@ -30,22 +30,22 @@ const CartPage = () => {
   };
 
   return (
-    <div className="bg-gray-50 min-h-screen py-12 px-6 font-inter">
+    <div className="bg-white dark:bg-dark min-h-screen py-12 px-6 font-inter">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Left Side: Cart Items */}
-        <div className="col-span-2 bg-white p-8 shadow-md">
-          <h1 className="text-4xl font-semibold text-gray-900 mb-8">Your Cart</h1>
+        <div className="col-span-2 bg-white dark:bg-dark p-8 shadow-md">
+          <h1 className="text-4xl font-semibold text-gray-900 dark:text-light mb-8">Your Cart</h1>
 
           {cartItems.length > 0 ? (
             <div className="space-y-6">
               {cartItems.map((item) => (
-                <div key={item.id} className="flex justify-between items-center bg-gray-100 p-5">
+                <div key={item.id} className="flex justify-between items-center bg-gray-100 dark:bg-dark p-5">
                   <div className="flex items-center space-x-6">
                     <img className="w-20 h-20 object-cover" src={item.image} alt={item.title} />
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-800">{item.title}</h3>
-                      <p className="text-sm text-gray-500">{item.instructor}</p>
-                      <p className="text-lg font-semibold text-primary mt-2">${item.price}</p>
+                      <h3 className="text-lg font-semibold text-gray-800 dark:text-light">{item.title}</h3>
+                      <p className="text-sm text-gray-500 dark:text-light">{item.instructor}</p>
+                      <p className="text-lg font-semibold text-primary dark:text-secondary mt-2">${item.price}</p>
                     </div>
                   </div>
                   <button
@@ -58,21 +58,21 @@ const CartPage = () => {
               ))}
             </div>
           ) : (
-            <p className="text-lg text-gray-500 text-center">Your cart is empty.</p>
+            <p className="text-lg text-gray-500 dark:text-light text-center">Your cart is empty.</p>
           )}
         </div>
 
         {/* Right Side: Order Summary */}
-        <div className="lg:col-span-1 bg-white p-8 shadow-md sticky top-12 space-y-6">
-          <h2 className="text-3xl font-semibold text-gray-900">Order Summary</h2>
+        <div className="lg:col-span-1 bg-white dark:bg-dark p-8 shadow-md sticky top-12 space-y-6">
+          <h2 className="text-3xl font-semibold text-gray-900 dark:text-light">Order Summary</h2>
 
           <div className="flex justify-between">
-            <p className="text-lg text-gray-700">Total Courses</p>
-            <p className="text-lg text-gray-700">{cartItems.length}</p>
+            <p className="text-lg text-gray-700 dark:text-light">Total Courses</p>
+            <p className="text-lg text-gray-700 dark:text-light">{cartItems.length}</p>
           </div>
 
           <div className="flex justify-between items-center">
-            <p className="text-2xl font-semibold text-gray-900">Total:</p>
+            <p className="text-2xl font-semibold text-gray-900 dark:text-light">Total:</p>
             <p className="text-2xl font-bold text-secondary">${totalPrice}</p>
           </div>
 
